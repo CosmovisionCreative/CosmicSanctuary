@@ -1,85 +1,75 @@
-<!-- update -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>A Haven</title>
+  <meta charset="UTF-8">
+  <title>A Haven to Return to Until the World Becomes One</title>
   <style>
-    html, body {
+    body, html {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow: hidden;
-      font-family: 'Cormorant Garamond', serif;
-      background-color: black;
+      font-family: 'Helvetica Neue', sans-serif;
       color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
     }
 
-    video {
+    #bgvid {
       position: fixed;
       right: 0;
       bottom: 0;
-      min-width: 100%; 
+      min-width: 100%;
       min-height: 100%;
-      object-fit: cover;
       z-index: -1;
+      object-fit: cover;
     }
 
-    .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      font-size: 2.5rem;
-      color: #ffffff;
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-      animation: shimmer 5s infinite alternate;
-    }
-
-    .credits {
-      position: fixed;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.6);
-      text-align: center;
-      z-index: 10;
+    h1 {
+      font-size: 2.8em;
+      letter-spacing: 1.5px;
+      background: linear-gradient(90deg, #fff, #c0c0ff, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 4s infinite;
     }
 
     @keyframes shimmer {
-      from { opacity: 0.7; text-shadow: 0 0 10px rgba(255,255,255,0.2); }
-      to { opacity: 1; text-shadow: 0 0 25px rgba(255,255,255,0.6); }
+      0% { background-position: -500px; }
+      100% { background-position: 500px; }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8em;
+      color: rgba(255, 255, 255, 0.7);
     }
   </style>
 </head>
 <body>
-  <video autoplay loop muted playsinline>
-    <source src="cosmic_background.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
+
+  <!-- 🌌 Background Video -->
+  <video autoplay muted loop id="bgvid">
+    <source src="background.mp4" type="video/mp4">
   </video>
 
-  <div class="content">
-    A Haven to Return to Until the World Becomes One
-  </div>
+  <!-- ✨ Centered Text -->
+  <h1>A Haven to Return to Until the World Becomes One</h1>
 
-  <div class="credits">
-    Video by <a href="https://pixabay.com/users/jordanchristopher-25197959/" target="_blank" style="color:rgba(255,255,255,0.7); text-decoration:underline;">Jordan Christopher</a> from Pixabay ·  
-    Music by <a href="https://www.youtube.com/@Chakratones" target="_blank" style="color:rgba(255,255,255,0.7); text-decoration:underline;">Chakratones</a> on YouTube  
-  </div>
+  <!-- 🎵 Background Music (YouTube) -->
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/TazZ05VqjXw?autoplay=1&loop=1&playlist=TazZ05VqjXw" frameborder="0" allow="autoplay"></iframe>
 
-  <!-- Background music (muted autoplay workaround) -->
-  <iframe 
-    width="0" 
-    height="0" 
-    src="https://www.youtube.com/embed/TazZ05VqjXw?autoplay=1&loop=1&playlist=TazZ05VqjXw&controls=0&mute=1" 
-    title="Chakratones ambient"
-    frameborder="0" 
-    allow="autoplay" 
-    allowfullscreen
-    style="display:none;">
-  </iframe>
+  <!-- 📝 Credits -->
+  <footer>
+    Video by Jordan Christopher from Pixabay | Music by Chakratones from YouTube
+  </footer>
+
 </body>
 </html>
