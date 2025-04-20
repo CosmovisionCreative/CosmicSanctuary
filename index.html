@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            font-weight: 100; /* Lighter font weight */
+            font-weight: 100;
             margin: 0;
             padding: 0;
             background-color: black;
@@ -19,7 +19,6 @@
             position: relative;
         }
 
-        /* Shimmer effect */
         .shimmer {
             font-size: 3em;
             color: white;
@@ -28,76 +27,4 @@
 
         @keyframes shimmer {
             0% {
-                text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7), 0 0 15px rgba(255, 255, 255, 0.7);
-            }
-            100% {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
-            }
-        }
-
-        /* Content styling */
-        .content {
-            position: relative;
-            top: 40%;
-            transform: translateY(-50%);
-            z-index: 2;
-        }
-
-        /* Credit styling */
-        .credit {
-            position: absolute;
-            bottom: 10px;
-            font-size: 12px;
-            color: white;
-            z-index: 2;
-        }
-
-        /* Prevent any scroll or overflow */
-        html, body {
-            height: 100%;
-        }
-
-        /* Full-screen video background */
-        #video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-
-    </style>
-</head>
-<body>
-
-    <!-- Background video -->
-    <video id="video-background" autoplay muted loop>
-        <source src="https://github.com/CosmovisionCreative/CosmicSanctuary/raw/main/nebula.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <!-- Main content -->
-    <div class="content">
-        <div class="shimmer">
-            A Haven to Return to Until the World Becomes One
-        </div>
-    </div>
-
-    <!-- Add audio for the page -->
-    <script>
-        // Audio from your downloaded MP3 file (upload the MP3 to GitHub)
-        var audio = new Audio('https://github.com/CosmovisionCreative/CosmicSanctuary/raw/main/cosmic_music.mp3'); // Replace with actual MP3 path
-        audio.loop = true;
-        audio.play();
-    </script>
-
-  <!-- Footer -->
-  <div class="footer">
-    <p><strong>Presented by <a href="https://www.facebook.com/CosmovisionCreative" target="_blank">Cosmovision Creative</a></strong></p>
-    <p>Video by Jordan Christopher from Pixabay · Music by Chakratones from YouTube</p>
-  </div>
-
-</body>
-</html>
+                text
