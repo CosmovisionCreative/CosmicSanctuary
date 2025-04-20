@@ -69,6 +69,19 @@
         }
     </style>
 </head>
+<button id="playButton" style="position:absolute; top:20px; right:20px; z-index:3; background:rgba(0,0,0,0.6); color:white; border:none; padding:10px 20px; cursor:pointer; font-family: 'Poppins', sans-serif;">
+    🎵 Play Sanctuary Music
+</button>
+
+<script>
+    var audio = new Audio('cosmic_music.mp3');
+    audio.loop = true;
+
+    document.getElementById('playButton').addEventListener('click', function () {
+        audio.play();
+        this.style.display = 'none'; // Hide the button once it's clicked
+    });
+</script>
 <body>
 
     <!-- Background video -->
