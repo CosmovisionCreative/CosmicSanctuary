@@ -31,4 +31,51 @@
                 text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7), 0 0 15px rgba(255, 255, 255, 0.7);
             }
             100% {
-                text-shadow: 0 0
+                text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+            }
+        }
+
+        .content {
+            position: relative;
+            top: 40%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .credit {
+            position: absolute;
+            bottom: 10px;
+            font-size: 12px;
+            color: white;
+            z-index: 2;
+        }
+
+        /* Prevent any scroll or overflow */
+        html, body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main content -->
+    <div class="content">
+        <div class="shimmer">
+            A Haven to Return to Until the World Becomes One
+        </div>
+    </div>
+
+    <!-- Credit Information -->
+    <div class="credit">
+        Video by Jordan Christopher from Pixabay | Music by Chakratones from YouTube
+    </div>
+
+    <!-- Add audio for the page -->
+    <script>
+        // Audio from your downloaded MP3 file (upload the MP3 to GitHub or your preferred host)
+        var audio = new Audio('your_audio_file_path.mp3'); // Replace with actual MP3 path
+        audio.loop = true;
+        audio.play();
+    </script>
+
+</body>
+</html>
