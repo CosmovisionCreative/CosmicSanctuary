@@ -16,10 +16,10 @@
             text-align: center;
             overflow: hidden;
             height: 100vh;
-            background: url('https://github.com/CosmovisionCreative/CosmicSanctuary/blob/main/nebula_video.mp4') no-repeat center center fixed;
-            background-size: cover;
+            position: relative;
         }
 
+        /* Shimmer effect */
         .shimmer {
             font-size: 3em;
             color: white;
@@ -35,6 +35,7 @@
             }
         }
 
+        /* Content styling */
         .content {
             position: relative;
             top: 40%;
@@ -42,6 +43,7 @@
             z-index: 2;
         }
 
+        /* Credit styling */
         .credit {
             position: absolute;
             bottom: 10px;
@@ -54,9 +56,28 @@
         html, body {
             height: 100%;
         }
+
+        /* Full-screen video background */
+        #video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- Background video -->
+    <video id="video-background" autoplay muted loop>
+        <source src="https://github.com/CosmovisionCreative/CosmicSanctuary/raw/main/nebula.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <!-- Main content -->
     <div class="content">
         <div class="shimmer">
@@ -71,8 +92,8 @@
 
     <!-- Add audio for the page -->
     <script>
-        // Audio from your downloaded MP3 file (upload the MP3 to GitHub or your preferred host)
-        var audio = new Audio('your_audio_file_path.mp3'); // Replace with actual MP3 path
+        // Audio from your downloaded MP3 file (upload the MP3 to GitHub)
+        var audio = new Audio('https://github.com/CosmovisionCreative/CosmicSanctuary/raw/main/cosmic_music.mp3'); // Replace with actual MP3 path
         audio.loop = true;
         audio.play();
     </script>
